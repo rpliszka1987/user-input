@@ -1,5 +1,8 @@
 import styles from "./Card.module.css";
+import AddUser from "../AddUser/AddUser";
 
-function Card() {}
+function Card() {
+  return <AddUser />;
+}
 
 export default Card;

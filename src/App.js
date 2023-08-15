@@ -1,10 +1,10 @@
 import React from "react";
-import AddUser from "./Components/AddUser/AddUser";
+import Card from "./Components/Card/Card";
 
 function App() {
   return (
     <div>
-      <AddUser />
+      <Card />
     </div>
   );
 }
