@@ -1,5 +1,11 @@
 import Styles from "./Button.module.css";
 
-function Button() {}
+function Button() {
+  return (
+    <button type="submit" className={Styles.button}>
+      Add User
+    </button>
+  );
+}
 
 export default Button;
