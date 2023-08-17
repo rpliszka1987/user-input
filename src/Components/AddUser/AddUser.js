@@ -1,15 +1,20 @@
 import styles from "./AddUser.module.css";
-import Button from "../Button/Button";
 
 function AddUser() {
+  const addUserHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
     // User info form
-    <form className={styles.input}>
-      <label>Username</label>
-      <input id="username" type="string"></input>
-      <label>Age (Years)</label>
+    <form className={styles.input} onSubmit={addUserHandler}>
+      <label htmlFor="username">Username</label>
+      <input id="username" type="text"></input>
+      <label htmlFor="user-age">Age (Years)</label>
       <input id="user-age" type="number"></input>
-      <Button />
+      <button type="submit" className={styles.button}>
+        Add User
+      </button>
     </form>
   );
 }
