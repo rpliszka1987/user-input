@@ -1,8 +1,10 @@
-import Styles from "./Button.module.css";
+import styles from "./Button.module.css";
 
-function Button() {
+function Button(props) {
   return (
-   
+    <button className={styles.button} type={props.type || "button"}>
+      {props.children}
+    </button>
   );
 }
 

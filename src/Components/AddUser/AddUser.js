@@ -1,5 +1,6 @@
 import styles from "./AddUser.module.css";
 import Card from "../Card/Card";
+import Button from "../Button/Button";
 
 function AddUser() {
   const addUserHandler = (event) => {
@@ -13,9 +14,7 @@ function AddUser() {
         <input id="username" type="text"></input>
         <label htmlFor="user-age">Age (Years)</label>
         <input id="user-age" type="number"></input>
-        <button type="submit" className={styles.button}>
-          Add User
-        </button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
