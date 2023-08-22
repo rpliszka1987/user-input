@@ -6,33 +6,27 @@ import Button from "../Button/Button";
 function AddUser() {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
-  const [isValid, setIsValid] = useState(true);
 
   const addUserHandler = (event) => {
     event.preventDefault();
 
-    if (enteredUsername && enteredAge) {
-      console.log(enteredUsername, enteredAge);
-    } else {
-      console.log('Not Valid')
+    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+      return;
+    }
+    if (+enteredAge < 1) {
+      return;
     }
 
+    console.log(enteredUsername, enteredAge);
     setEnteredUsername("");
     setEnteredAge("");
   };
 
   const usernameHandler = (event) => {
-    if (event.target.value.trim().length > 0) {
-      setIsValid(true);
-    }
     setEnteredUsername(event.target.value);
   };
 
   const ageHandler = (event) => {
-    if (event.target.value > 0 && event.target.value.trim().lrngth > 0) {
-      setIsValid(true);
-    }
-
     setEnteredAge(event.target.value);
   };
 
