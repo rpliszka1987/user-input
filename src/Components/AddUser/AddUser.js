@@ -46,7 +46,7 @@ function AddUser(props) {
   };
 
   return (
-    <Wrapper>
+    <>
       {error && (
         <ErrolModal
           title={error.title}
@@ -73,7 +73,7 @@ function AddUser(props) {
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </Wrapper>
+    </>
   );
 }
 

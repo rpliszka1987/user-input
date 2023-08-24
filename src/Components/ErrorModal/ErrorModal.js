@@ -5,7 +5,7 @@ import Wrapper from "../Helpers/Wrapper";
 
 function ErrorModal(props) {
   return (
-    <Wrapper>
+    <>
       <div className={styles.backdrop} onClick={props.onConfirm} />
       <Card className={styles.modal}>
         <header className={styles.header}>
@@ -18,7 +18,7 @@ function ErrorModal(props) {
           <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
-    </Wrapper>
+    </>
   );
 }
 
